@@ -23,7 +23,7 @@ This project covers the essential authentication functionalities of a back-end A
 and social media authentication. The CustomUser is set as the authentication user model, which builds off of [Django's usual user model](https://docs.djangoproject.com/en/2.2/ref/contrib/auth/), 
 to allow developers to add extra user data (e.g. user's occupation or country of residence).   
 
-###### Versions ######
+###### Existing Versions ######
 |  #  | Functionality Additions | Compatible with Front-End Version # |  
 |:---:| :---------------------- | :---------------------------------: |  
 |  1  |                         |                  -                  | 
