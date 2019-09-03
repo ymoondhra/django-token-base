@@ -4,7 +4,8 @@ from rest_framework.test import APITestCase
 
 # These test cases ensure the success of the functionality of the endpoints defined in urls.py
 class ApiTestCase(APITestCase):
-    # only functions that start with lowercase "test" are automatically executed.
+    # Only functions that start with lowercase "test" are automatically executed.
+    # The objects created in a "test" function do not persist after the function ends
     # They are executed in alphabetical order
 
     # setUp is called before every test
@@ -21,7 +22,7 @@ class ApiTestCase(APITestCase):
         response = self.client.post('/api/v1/rest-auth/registration/', signup_credentials, format='json')
         self.assertContains(response, text='key', status_code=201)
         self.key = json.loads(response.content)['key']
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' + str(self.key))
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + str(self.key))  # set Authorization header
 
     # tearDown is called after every test
     def tearDown(self):
@@ -29,9 +30,8 @@ class ApiTestCase(APITestCase):
 
 # URLS
     def test_api_users_urls(self):
-        pass  # done in users/tests.py
+        pass  # done in ../users/tests.py
 
-    # the account created in this function does not persist after this function ends
     def test_api_signup_without_email(self):
         signup_credentials = {'username': self.general_credentials['username'] + '2',
                               'password1': self.general_credentials['password'],

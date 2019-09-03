@@ -1,16 +1,19 @@
 import json
 from django.test import TestCase
 from django.contrib.auth import get_user_model
+
+from .models import CustomUser
 from .serializers import UserSerializer
 
 
 class UserModelTestCase(TestCase):
-    # only functions that start with lowercase "test" are automatically executed.
+    # Only functions that start with lowercase "test" are automatically executed.
+    # The objects created in a "test" function do not persist after the function ends
     # They are executed in alphabetical order
 
     # setUp is called before every test
     def setUp(self):
-        self.UserModel = get_user_model()  # Current user model: CustomUser
+        self.UserModel = get_user_model()
         self.username1 = "apple"
         self.user1 = self.UserModel.objects.create(
           username=self.username1,
@@ -23,6 +26,9 @@ class UserModelTestCase(TestCase):
         pass
 
 # MODEL
+    def test_user_model(self):
+        self.assertEquals(self.UserModel, CustomUser)  # the project is using the CustomUser model
+
     def test_user_created(self):
         custom_user = self.UserModel.objects.filter(username=self.username1)
         self.assertEqual(custom_user.count(), 1)
@@ -53,6 +59,7 @@ class UserModelTestCase(TestCase):
         self.assertEquals(response.status_code, 200)
         response_user_count = len(json.loads(response.content))
         self.assertEquals(response_user_count, self.user_count + 1)
+        # + 1 because we created user in this function, but that user will disappear after the function returns
 
     def test_user_view_userdetail(self):
         response = self.client.get('/api/v1/users/' + str(self.user1.id))
