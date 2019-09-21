@@ -14,9 +14,10 @@ This is a Django project that serves as a base model to build Django back-end AP
 
 #### Prerequisites ####
 To thoroughly comprehend this solution, it is highly recommended to have a strong understanding of the following:
-  * Django
-  * Django Rest Framework (DRF)
-  * django-rest-auth    
+  * [Django](https://www.djangoproject.com/)
+  * [Django Rest Framework](https://www.django-rest-framework.org/), also known as DRF
+  * [django-rest-auth](https://github.com/Tivix/django-rest-auth)
+  * [Token authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)     
 
 #### Project Description ####
 This project covers the essential authentication functionalities of a back-end API that uses token authentication, which can be found [here](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html),
