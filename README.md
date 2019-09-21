@@ -6,11 +6,10 @@ This is a Django project that serves as a base model to build Django back-end AP
   * [Prerequisites](#Prerequisites)
   * [Project Description](#Project-Description)
   * [Run The Project](#Run-The-Project)
-  * [Existing Versions](#Existing-Versions)
-  * [Future Versions](#Future-Versions)
+  * [Versions](#Versions)
   * [Why I Built This](#Why-I-Built-This)
   * [How I Built This](#How-I-Built-This)
-  * [API Endpoints](#API-Endpoints)    
+  * [API Endpoints](#API-Endpoints)     
 
 #### Prerequisites ####
 To thoroughly comprehend this solution, it is highly recommended to have a strong understanding of the following:
@@ -25,12 +24,14 @@ and will eventually support social media authentication. The CustomUser is set a
 to allow developers to add extra user data (e.g. user's occupation or country of residence).        
 
 #### Run The Project ####
-1. `git clone https://github.com/ymoondhra/django-token-base`
-2. `cd django-token-base`
+1. `git clone https://github.com/ymoondhra/django-token -base`
+2. `cd django-token-base`  
 3. `source env/bin/activate`
 4. `cd token-auth/`
 5. `python3 manage.py runserver`
 6. Navigate to [http://localhost:8000/api/v1/rest-auth/login/](http://localhost:8000/api/v1/rest-auth/login/)    
+
+#### Versions ####
 
 ###### Existing Versions ######
 |  #  | Functionality Additions | Compatible with Front-End Version # |  
