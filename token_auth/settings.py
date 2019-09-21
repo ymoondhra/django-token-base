@@ -25,8 +25,8 @@ SECRET_KEY = '(dmvoc6fw5@9su*_bmnh66jj#8t)=a*x8+lbs)cr1%3d$ai7=^'  # REMOVE THIS
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
+ALLOWED_HOSTS = ['127.0.0.1', '10.0.2.2', 'localhost']
+                             # 10.0.2.2 is for android simulator
 
 # Application definition
 
