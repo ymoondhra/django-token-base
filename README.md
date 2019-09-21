@@ -1,44 +1,49 @@
 # django-token-base
-This is a Django project that serves as a base model to build Django back-end APIs that require token and social media authentication. 
-It utilizes [Django Rest Framework](https://www.django-rest-framework.org/) and [django-rest-auth](https://github.com/Tivix/django-rest-auth).   
-**The compatible front-end application will be posted soon.** 
-
+This is a Django project that serves as a base model to build Django back-end APIs that require token and social media authentication. It utilizes [Django Rest Framework](https://www.django-rest-framework.org/) and [django-rest-auth](https://github.com/Tivix/django-rest-auth).   
+**The compatible front-end application can be found [here](https://github.com/ymoondhra/tokenAuthFront).** 
 
 #### Table of Contents ####
   * [Prerequisites](#Prerequisites)
   * [Project Description](#Project-Description)
-  * [Versions](#Versions)
+  * [Run The Project](#Run-The-Project)
+  * [Existing Versions](#Existing-Versions)
   * [Future Versions](#Future-Versions)
   * [Why I Built This](#Why-I-Built-This)
   * [How I Built This](#How-I-Built-This)
+  * [API Endpoints](#API-Endpoints)    
 
 #### Prerequisites ####
 To thoroughly comprehend this solution, it is highly recommended to have a strong understanding of the following:
   * Django
   * Django Rest Framework (DRF)
-  * django-rest-auth
+  * django-rest-auth    
 
 #### Project Description ####
 This project covers the essential authentication functionalities of a back-end API that uses token authentication, which can be found [here](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html),
-and social media authentication. The CustomUser is set as the authentication user model, which builds off of [Django's usual user model](https://docs.djangoproject.com/en/2.2/ref/contrib/auth/), 
-to allow developers to add extra user data (e.g. user's occupation or country of residence).   
+and will eventually support social media authentication. The CustomUser is set as the authentication user model, which builds off of [Django's usual user model](https://docs.djangoproject.com/en/2.2/ref/contrib/auth/), 
+to allow developers to add extra user data (e.g. user's occupation or country of residence).        
+
+#### Run The Project ####
+1. `git clone https://github.com/ymoondhra/django-token-base`
+2. `cd django-token-base`
+3. `source env/bin/activate`
+4. `cd token-auth/`
+5. `python3 manage.py runserver`
+6. Navigate to [http://localhost:8000/api/v1/rest-auth/login/](http://localhost:8000/api/v1/rest-auth/login/)    
 
 ###### Existing Versions ######
 |  #  | Functionality Additions | Compatible with Front-End Version # |  
 |:---:| :---------------------- | :---------------------------------: |  
-|  1  |                         |                  -                  | 
+|  1  | Support for [endpoints found below](#API-Endpoints) |    1    | 
 
 ###### Future Versions ######
 |  #  | Functionality Additions | Compatible with Front-End Version # |  
 |:---:| :---------------------- | :---------------------------------: |  
-|  2  | For token auth account creation, require email, first name, last name, and one password (instead of requiring username and two passwords). For login/logout, require email (instead of username) | - |
-|  3  | Add Facebook authentication as a property of CustomUser | - | 
-
+|  2  | Use email address as username |            -                  |
+|  3  | Support social media account authentication and creation | -  | 
 
 #### Why I Built This ####
-In my experiences with full-stack applications, I have noticed how I have to rebuild the same functionalities every time (e.g. authentication), 
-often having to look back at previous projects I have created. I want to minimize the amount of time developers need to spend on the repetitive aspects 
-of creating a back-end API for full-stack applications. 
+In my experiences with full-stack applications, I have noticed how I have to rebuild the same functionalities every time (e.g. authentication), often having to look back at previous projects I have created. I want to minimize the amount of time developers spend on the repetitive aspects of creating a back-end API for full-stack applications.     
 
 Moreover, I want developers to be able to pull different versions of this project for the different functionalities they need. For example,
 If someone wants to build a back-end API that allows users to log in with Facebook or log in with their actual username, a developer
@@ -48,7 +53,6 @@ the directories of Version 1 (which uses username) and Version 3, compare the co
 to decide what code to remove.
 
 For the developers who would prefer to start from scratch but use this project for reference, the section below outlines how I went about coding this API.
-
 
 #### How I Built This ####
 
@@ -80,9 +84,7 @@ Project Deployment
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Push token_auth and README.md to GitHub (not env folder)
 
 
-#### Examples ####
-###### [API Endpoints](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html) #######
-  * Create account: http://localhost:8000/api/v1/rest-auth/registration/
-  * Login: http://localhost:8000/api/v1/rest-auth/login/
-  * The rest of the API endpoints are located [here](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html)
+#### API Endpoints ####
+  * Sign Up: [http://127.0.0.1:8000/api/v1/rest-auth/registration/](http://127.0.0.1:8000/api/v1/rest-auth/registration/)
+  * All of [these API endpoints](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html) are supported except: .../password/change and social media endpoints
 
