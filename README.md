@@ -87,6 +87,8 @@ Project Deployment
 
 
 #### API Endpoints ####
-  * Sign Up: [http://127.0.0.1:8000/api/v1/rest-auth/registration/](http://127.0.0.1:8000/api/v1/rest-auth/registration/)
-  * All of [these API endpoints](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html) are supported except: .../password/change and social media endpoints
+All of [these API endpoints](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html) are supported except:
+  * .../password/change    
+  * social media endpoints   
+  
 
