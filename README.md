@@ -36,7 +36,7 @@ to allow developers to add extra user data (e.g. user's occupation or country of
 ###### Existing Versions ######
 |  #  | Functionality Additions | Compatible with Front-End Version # |  
 |:---:| :---------------------- | :---------------------------------: |  
-|  1  | Support for [endpoints found below](#API-Endpoints) |    1    | 
+|  1  | Support for [endpoints found below](#API-Endpoints) with test cases |    1    | 
 
 ###### Future Versions ######
 |  #  | Functionality Additions | Compatible with Front-End Version # |  
