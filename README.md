@@ -24,12 +24,17 @@ and will eventually support social media authentication. The CustomUser is set a
 to allow developers to add extra user data (e.g. user's occupation or country of residence).        
 
 #### Run The Project ####
-1. `git clone https://github.com/ymoondhra/django-token-base`
-2. `cd django-token-base`
-3. `source env/bin/activate`
-4. `cd token-auth/`
-5. `python3 manage.py runserver`
-6. Navigate to [http://localhost:8000/api/v1/rest-auth/login/](http://localhost:8000/api/v1/rest-auth/login/)    
+1. `mkdir token_auth`
+2. `cd token_auth`
+3. `python3 -m venv env`
+4. `source env/bin/activate`
+5. `pip install --upgrade pip`
+6. `pip3 install django && pip3 install djangorestframework && pip3 install django-rest-auth && pip3 install django-allauth`
+7. `git clone https://github.com/ymoondhra/django-token-base`
+8. `cd django-token-base`
+9. `python3 manage.py runserver`
+10. `python3 manage.py makemigrations && python3 manage.py migrate`
+11. Navigate to [http://localhost:8000/api/v1/rest-auth/login/](http://localhost:8000/api/v1/rest-auth/login/)    
 
 #### Versions ####
 
@@ -59,13 +64,6 @@ For the developers who would prefer to start from scratch but use this project f
 #### How I Built This ####
 
 ###### Version 1 ######
-Project Creation  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. python3 -m venv env  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. source env/bin/activate  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. django-admin startproject token_auth  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. pip install --upgrade pip  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. pip3 install django, djangorestframework, django-rest-auth, django-allauth  
-
 Overall Coding Structure  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Build Users app  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Build Api app  
