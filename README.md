@@ -52,14 +52,15 @@ to allow developers to add extra user data (e.g. user's occupation or country of
 #### Why I Built This ####
 In my experiences with full-stack applications, I have noticed how I have to rebuild the same functionalities every time (e.g. authentication), often having to look back at previous projects I have created. I want to minimize the amount of time developers spend on the repetitive aspects of creating a back-end API for full-stack applications.     
 
-Moreover, I want developers to be able to pull different versions of this project for the different functionalities they need. For example,
+Moreover, I want developers to be able to pull different versions (a.k.a. [releases](https://github.com/ymoondhra/django-token-base/releases)) of this project for the different functionalities they need. For example,
 If someone wants to build a back-end API that allows users to log in with Facebook or log in with their actual username, a developer
-may pull down only Version 3, which is the first version that has the Facebook login feature. 
-However, Version 3 uses email to login/logout instead of username. Therefore, the best approach would be to pull down 
-the directories of Version 1 (which uses username) and Version 3, compare the code, and use the helpful comments within the code
+may pull down only Version 3.0.0, which is the first version that has the Facebook login feature. 
+However, Version 3.0.0 uses email to login/logout instead of username. Therefore, the best approach would be to pull down 
+the directories of Version 1.0.0 (which uses username) and Version 3.0.0, compare the code, and use the helpful comments within the code
 to decide what code to remove.
 
-For the developers who would prefer to start from scratch but use this project for reference, the section below outlines how I went about coding this API.
+For the developers who would prefer to start from scratch but use this project for reference, the section below outlines how I went about coding this API.  
+All versions can be found [here](https://github.com/ymoondhra/django-token-base/releases).
 
 #### How I Built This ####
 
