@@ -86,8 +86,6 @@ Project Deployment
 
 
 #### API Endpoints ####
-All of [these API endpoints](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html) are supported except:
-  * .../password/change    
-  * social media endpoints   
+All of [these API endpoints](https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html) are supported except the social media endpoints
   
 
