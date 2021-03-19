@@ -6,7 +6,7 @@ Django==2.1.11
 django-allauth==0.39.1
 django-filter==2.1.0
 django-rest-auth==0.9.5
-djangorestframework==3.9.4
+djangorestframework==3.11.2
 EasyProcess==0.2.7
 gunicorn==19.9.0
 idna==2.8
